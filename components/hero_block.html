@@ -1,0 +1,12 @@
+<section id="{{ include_dict.section.section_id }}" class="block hero-block outer">
+  <div class="inner-small">
+    <div class="block-header">
+      <h2 class="block-title">{{ include_dict.section.title }}</h2>
+    </div><!-- .block-header -->
+    <div class="block-content">
+      <div class="block-copy">
+        {{ include_dict.section.content | markdownify }}
+      </div>
+    </div><!-- .block-content -->
+  </div><!-- .inner -->
+</section><!-- .block -->
