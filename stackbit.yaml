@@ -484,5 +484,7 @@ models:
 stackbit_banner:
   show_banner: true
   name: Exto
-  create_url: 'https://app.stackbit.com/wizard?theme=exto'
+  create_url: 'https://app.stackbit.com/create?theme=exto'
   github_url: 'https://github.com/stackbithq/stackbit-theme-exto'
+pagesDir: content
+staticDir: static
