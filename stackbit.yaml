@@ -1,5 +1,12 @@
-stackbitVersion: ~0.2.39
+stackbitVersion: ~0.2.0
+ssgName: unibit
+buildCommand: unibit build
+publishDir: output
+staticDir: static
 uploadDir: images
+dataDir: data
+pagesDir: content
+pageLayoutKey: layout
 metadata:
   title: Exto
   description: A portfolio theme with a blog
@@ -486,5 +493,3 @@ stackbit_banner:
   name: Exto
   create_url: 'https://app.stackbit.com/create?theme=exto'
   github_url: 'https://github.com/stackbithq/stackbit-theme-exto'
-pagesDir: content
-staticDir: static
