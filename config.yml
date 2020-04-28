@@ -2,18 +2,60 @@ baseurl: "/"
 title: "Stackbit Exto Theme"
 page_load_js: "assets/js/main.js"
 params:
+  description: A portfolio theme with a blog
   color_scheme: light
   accent_color: pink
   header:
     title: Exto
     has_nav: true
+    nav_links:
+      - label: Home
+        url: /
+        type: link
+      - label: Portfolio
+        url: /portfolio
+        type: link
+      - label: Blog
+        url: /blog
+        type: link
+      - label: Style Guide
+        url: /style-guide
+        type: link
+      - label: About
+        url: /about
+        type: link
+      - label: Contact
+        url: /contact
+        type: link
   footer:
     content: "&copy; Stackbit-Exto. All rights reserved."
     links:
-      - text: Made with Stackbit
+      - label: Made with Stackbit.
         url: https://www.stackbit.com
+        type: link
         new_window: true
     has_social: true
+    social_links:
+      - label: Twitter
+        url: https://twitter.com/
+        type: icon
+        icon_class: fa-twitter
+        new_window: true
+      - label: Instagram
+        url: https://www.instagram.com/
+        type: icon
+        icon_class: fa-instagram
+        new_window: true
+      - label: Dribbble
+        url: https://dribbble.com/
+        type: icon
+        icon_class: fa-dribbble
+        new_window: true
+      - label: LinkedIn
+        url: https://www.linkedin.com/
+        type: icon
+        icon_class: fa-linkedin
+        new_window: true
 sass:
   input_file: sass/main.scss.njk
   output_file: assets/css/main.css

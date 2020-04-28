@@ -1,8 +1,8 @@
 ---
 title: Blog
-menus:
-  main:
-    weight: 3
-    title: Blog
-template: blog
+subtitle: >-
+  News, tips and highlights
+hide_title: false
+col_number: three
+layout: blog
 ---

@@ -1,0 +1,10 @@
+{% set actions = include_dict.actions %}
+{% for action in actions %}
+<a {{ classNames({'button': action.type == 'button'}) }} href="{{ action.url }}" {% if action.new_window %}target="_blank" rel="noopener"{% endif %}>
+  {% if action.type == 'icon' %}
+  <span class="fab {{ action.icon_class }}" aria-hidden="true"></span><span class="screen-reader-text">{{ action.label }}</span>
+  {% else %}
+  {{ action.label }}
+  {% endif %}
+</a>
+{% endfor %}

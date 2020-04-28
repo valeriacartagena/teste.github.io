@@ -1,8 +1,12 @@
-<ul class="social-links">
-  {% for link in site.data.social.links %}
-  <li>
-    <a href="{{ link.url }}" target="_blank" rel="noopener"><span class="fab {{ link.icon }}"
-        aria-hidden="true"></span><span class="screen-reader-text">{{ link.title }}</span></a>
-  </li>
+<div class="social-links">
+  {% for link in site.params.footer.social_links %}
+  <a {{ classNames({'button': link.type == 'button'}) }} href="{{ link.url }}" {% if link.new_window %}target="_blank" rel="noopener"{% endif %}>
+    {% if link.type == 'icon' %}
+    <span class="fab {{ link.icon_class }}"
+      aria-hidden="true"></span><span class="screen-reader-text">{{ link.label }}</span>
+    {% else %}
+    {{ link.label }}
+    {% endif %}
+  </a>
   {% endfor %}
-</ul><!-- .social-links -->
+</div><!-- .social-links -->

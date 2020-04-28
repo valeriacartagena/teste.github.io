@@ -1,75 +1,74 @@
 ---
 title: Home
+hide_title: true
 sections:
   - section_id: hero
-    component: "hero_block.html"
-    type: heroblock
+    type: section_hero
     title: Hi, I'm Stackbit Exto Portfolio Theme.
     content: |-
       This section can contain a subtitle or tagline. The recommended length is one to three sentences, but can be changed as you prefer.
+    actions:
+      - label: Sounds good? Let's chat
+        url: /contact
+        type: button
   - section_id: latest-projects
-    component: "portfolio_block.html"
-    type: portfolioblock
+    type: section_portfolio
     layout_style: mosaic
     title: Recent Work
     subtitle: >-
       An optional subtitle of the section
-    num_projects_displayed: 6
-    view_all_text: View All
+    projects_number: 6
+    view_all_label: View All
     view_all_url: "portfolio/index.html"
   - section_id: services
-    component: "services_block.html"
-    type: servicesblock
+    type: section_grid
     title: What We Do
     subtitle: >-
       An optional subtitle of the section
-    serviceslist:
+    col_number: two
+    is_numbered: true
+    grid_items:
       - title: Service Title
         content: |-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh fringilla, fringilla tortor at, pulvinar orci.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh fringilla, fringilla .
       - title: Service Title
         content: |-
-          Donec lobortis velit sed suscipit lobortis. Ut non quam metus. Nullam a maximus mi. Quisque justo nunc, sollicitudin euismod euismod at, tincidunt ut tellus. Vivamus rhoncus mattis varius. 
+          Donec lobortis velit sed suscipit lobortis. Ut non quam metus. Nullam a maximus mi. Quisque justo nunc, sollicitudin euismod euismod at, tincidunt ut tellus.
+      - title: Service Title
+        content: |-
+          Sed laoreet magna commodo libero euismod sodales. Nunc ac libero convallis, interdum ligula vel, pretium diam. Integer commodo sem at dui sollicitudin.
       - title: Service title
         content: |-
           Vestibulum a nunc ut eros condimentum posuere. Nullam dapibus quis nunc non interdum. Pellentesque tortor ligula, gravida ac commodo eu.
-      - title: Service title
-        content: |-
-          Aliquam pulvinar, orci ac scelerisque tempus, felis leo sagittis justo, sit amet condimentum lorem nibh vel quam. Duis consectetur lorem ipsum, non efficitur urna viverra et.
   - section_id: testimonials
-    component: "testimonials_block.html"
-    type: testimonialsblock
+    type: section_testimonials
     title: Testimonials
     subtitle: >-
       An optional subtitle of the section
-    testimonialslist:
-      - author: John Doe
-        avatar: images/john_doe.jpg
+    col_number: three
+    testimonials:
+      - author: Sean Salazar
+        avatar: images/sean_salazar.jpg
+        content: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh fringilla.
+      - author: Aubrey Hoover
+        avatar: images/aubrey_hoover.jpg
         content: >-
           Vestibulum a nunc ut eros condimentum posuere. Nullam dapibus quis nunc non interdum. Pellentesque tortor ligula, gravida ac commodo eu.
-      - author: Jane Roe
-        avatar: images/jane_roe.jpg
+      - author: Deegan Wallace
+        avatar: images/deegan_wallace.jpg
         content: >-
-          Sed laoreet magna commodo libero euismod sodales. Nunc ac libero convallis, interdum ligula vel, pretium diam. Integer commodo sem at dui sollicitudin, vel posuere justo laoreet.
+          Sed laoreet magna commodo libero euismod sodales. Nunc ac libero convallis, interdum ligula vel, pretium diam.
   - section_id: latest-posts
-    component: "posts_block.html"
-    type: postsblock
+    type: section_posts
     title: Latest from the Blog
     subtitle: >-
       An optional subtitle of the section
-    num_posts_displayed: 2
+    posts_number: 3
+    col_number: three
     actions:
     - label: View Blog
       url: blog/index.html
-  - section_id: contact
-    component: "contact_block.html"
-    type: contactblock
-    title: Contact Us
-    subtitle: >-
-      An optional subtitle of the section
-menus:
-  main:
-    weight: 1
-    title: Home
-template: home
+      type: button
+layout: generic
 ---

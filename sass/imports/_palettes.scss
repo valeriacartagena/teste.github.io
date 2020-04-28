@@ -1,12 +1,14 @@
 /**
  * Palettes
- * ----------------------------------------------------------------------------
  */
- .palette-dark {
-  background: _palette(primary);
-  color: _palette(primary-alt);
+.palette-dark {
+  background: _palette(charcoal);
+  color: _palette(charcoal-light-60);
 
-  pre,
+  pre {
+    background: _palette(charcoal-light-3);
+  }
+
   hr,
   th,
   td,
@@ -14,16 +16,16 @@
   input[type="password"],
   input[type="email"],
   input[type="tel"],
+  input[type="number"],
   input[type="search"],
   input[type="url"],
   select,
   textarea,
   .site-header,
   .site-footer,
-  .contact-block,
-  .service-counter:before,
-  .service-counter:after {
-    border-color: _palette(border-alt);
+  .grid-item-counter:before,
+  .grid-item-counter:after {
+    border-color: _palette(charcoal-light-7);
   }
 
   h1,
@@ -32,62 +34,83 @@
   h4,
   h5,
   h6,
-  blockquote,
   th,
   label {
     color: #fff;
   }
 
   a:not(.button):hover,
-  a:not(.button):focus,
-  .site-navigation,
-  .site-footer,
-  .post-subtitle { 
-    color: _palette(primary-alt);
+  a:not(.button):focus {
+    color: _palette(charcoal-light-60);
   }
 
   caption,
-  .block-subtitle,
-  .hero-block .block-content,
   .page-subtitle,
+  .post-subtitle,
+  .post-meta,
+  .pagination .page-number
+  .block-subtitle,
   .testimonial-author {
-    color: _palette(meta);
+    color: _palette(charcoal-light-25);
   }
- 
+
+  ::-webkit-input-placeholder {
+    color: _palette(charcoal-light-25);
+  }
+  
+  ::-moz-placeholder {
+    color: _palette(charcoal-light-25);
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+    color: _palette(charcoal-light-25);
+  }
+  
+  ::-ms-input-placeholder {
+    color: _palette(charcoal-light-25);
+  }
+  
+  ::placeholder {
+    color: _palette(charcoal-light-25);
+  }
+
   @media only screen and (max-width: 800px) {
-    .site-header:before {
-      background: rgba(darken(_palette(primary), 15%),.6);
+    .site-header:after {
+      background: rgba(_palette(charcoal-dark-15),.6);
     }
-
+  
     .site-navigation {
-      background:_palette(primary);
-
-      .menu-item,
-      .menu-item:first-child {
-        border-color: _palette(border-alt);
-      }
+      background:_palette(charcoal);
+    }
+  
+    .menu-item,
+    .menu-item:not(.menu-button):last-child {
+      border-color: _palette(charcoal-light-7);
     }
   }
 }
 
-/* Green accent color */
 .accent-green {
   a,
-  .site-navigation .current-menu-item,
-  #main-navigation a:hover,
-  #main-navigation a:focus,
-  #colophon a:hover,
-  #colophon a:focus,
-  .testimonial-text:before,
-  .view-all {
+  blockquote:before,
+  .menu-item.current-menu-item,
+  .menu-item a:not(.button):hover,
+  .view-all-button,
+  #colophon a:not(.button):hover {
     color: _palette(accent-green);
+  }
+
+  .form-group .animate-border,
+  .site-title a {
+    background: _palette(accent-green);
   }
 
   button,
   input[type="submit"],
   input[type="button"],
   input[type="reset"],
-  a.button {
+  .button {
     border-color: _palette(accent-green);
     color: _palette(accent-green);
 
@@ -98,41 +121,37 @@
     }
   }
 
-  blockquote,
-  button.button:before,
-  button.button:after,
   a.button:before,
   a.button:after,
-  .line-top:before,
-  .view-all:before,
-  .view-all:after {
+  button.button:before,
+  button.button:after,
+  .view-all-button:before,
+  .view-all-button:after,
+  .line-top:before {
     border-color: _palette(accent-green);
-  }
-
-  .form-row .input-focus,
-  .site-title a {
-    background: _palette(accent-green);
   }
 }
 
-/* Blue accent color */
 .accent-blue {
   a,
-  .site-navigation .current-menu-item,
-  #main-navigation a:hover,
-  #main-navigation a:focus,
-  #colophon a:hover,
-  #colophon a:focus,
-  .testimonial-text:before,
-  .view-all {
+  blockquote:before,
+  .menu-item.current-menu-item,
+  .menu-item a:not(.button):hover,
+  .view-all-button,
+  #colophon a:not(.button):hover {
     color: _palette(accent-blue);
+  }
+
+  .form-group .animate-border,
+  .site-title a {
+    background: _palette(accent-blue);
   }
 
   button,
   input[type="submit"],
   input[type="button"],
   input[type="reset"],
-  a.button {
+  .button {
     border-color: _palette(accent-blue);
     color: _palette(accent-blue);
 
@@ -143,41 +162,37 @@
     }
   }
 
-  blockquote,
-  button.button:before,
-  button.button:after,
   a.button:before,
   a.button:after,
-  .line-top:before,
-  .view-all:before,
-  .view-all:after {
+  button.button:before,
+  button.button:after,
+  .view-all-button:before,
+  .view-all-button:after,
+  .line-top:before {
     border-color: _palette(accent-blue);
-  }
-
-  .form-row .input-focus,
-  .site-title a {
-    background: _palette(accent-blue);
   }
 }
 
-/* Violet accent color */
 .accent-violet {
   a,
-  .site-navigation .current-menu-item,
-  #main-navigation a:hover,
-  #main-navigation a:focus,
-  #colophon a:hover,
-  #colophon a:focus,
-  .testimonial-text:before,
-  .view-all {
+  blockquote:before,
+  .menu-item.current-menu-item,
+  .menu-item a:not(.button):hover,
+  .view-all-button,
+  #colophon a:not(.button):hover {
     color: _palette(accent-violet);
+  }
+
+  .form-group .animate-border,
+  .site-title a {
+    background: _palette(accent-violet);
   }
 
   button,
   input[type="submit"],
   input[type="button"],
   input[type="reset"],
-  a.button {
+  .button {
     border-color: _palette(accent-violet);
     color: _palette(accent-violet);
 
@@ -188,41 +203,37 @@
     }
   }
 
-  blockquote,
-  button.button:before,
-  button.button:after,
   a.button:before,
   a.button:after,
-  .line-top:before,
-  .view-all:before,
-  .view-all:after {
+  button.button:before,
+  button.button:after,
+  .view-all-button:before,
+  .view-all-button:after,
+  .line-top:before {
     border-color: _palette(accent-violet);
-  }
-
-  .form-row .input-focus,
-  .site-title a {
-    background: _palette(accent-violet);
   }
 }
 
-/* Yellow accent color */
 .accent-yellow {
   a,
-  .site-navigation .current-menu-item,
-  #main-navigation a:hover,
-  #main-navigation a:focus,
-  #colophon a:hover,
-  #colophon a:focus,
-  .testimonial-text:before,
-  .view-all {
+  blockquote:before,
+  .menu-item.current-menu-item,
+  .menu-item a:not(.button):hover,
+  .view-all-button,
+  #colophon a:not(.button):hover {
     color: _palette(accent-yellow);
+  }
+
+  .form-group .animate-border,
+  .site-title a {
+    background: _palette(accent-yellow);
   }
 
   button,
   input[type="submit"],
   input[type="button"],
   input[type="reset"],
-  a.button {
+  .button {
     border-color: _palette(accent-yellow);
     color: _palette(accent-yellow);
 
@@ -233,19 +244,13 @@
     }
   }
 
-  blockquote,
-  button.button:before,
-  button.button:after,
   a.button:before,
   a.button:after,
-  .line-top:before,
-  .view-all:before,
-  .view-all:after {
+  button.button:before,
+  button.button:after,
+  .view-all-button:before,
+  .view-all-button:after,
+  .line-top:before {
     border-color: _palette(accent-yellow);
-  }
-
-  .form-row .input-focus,
-  .site-title a {
-    background: _palette(accent-yellow);
   }
 }
