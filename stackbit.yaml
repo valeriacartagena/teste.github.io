@@ -91,10 +91,10 @@ models:
             description: List of social links in the footer.
             items:
               type: action
-  generic:
+  advanced:
     type: page
-    label: Generic Page
-    layout: generic
+    label: Advanced Page
+    layout: advanced
     hideContent: true
     fields:
       - type: string

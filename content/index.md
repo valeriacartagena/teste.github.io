@@ -70,5 +70,5 @@ sections:
     - label: View Blog
       url: blog/index.html
       type: button
-layout: generic
+layout: advanced
 ---
