@@ -8,7 +8,7 @@ sections:
     content: |-
       This section can contain a subtitle or tagline. The recommended length is one to three sentences, but can be changed as you prefer.
     actions:
-      - label: Sounds good? Let's chat
+      - label: Let's talk
         url: /contact
         type: button
   - section_id: latest-projects
@@ -19,7 +19,7 @@ sections:
       An optional subtitle of the section
     projects_number: 6
     view_all_label: View All
-    view_all_url: "portfolio/index.html"
+    view_all_url: portfolio/index.html
   - section_id: services
     type: section_grid
     title: What We Do

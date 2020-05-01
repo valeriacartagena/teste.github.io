@@ -16,16 +16,10 @@
         <div class="site-nav-inside">
           <button id="menu-close" class="menu-toggle"><span class="screen-reader-text">Open Menu</span><span class="icon-close" aria-hidden="true"></span></button>
           <ul class="menu">
-            {% for item in site.params.header.nav_links %}
-            <li {{ classNames('menu-item', {'current-menu-item': page.url == item.url, 'menu-button': item.type == 'button' }) }}>
-              <a {{ classNames({'button': item.type == 'button'}) }} href="{{ item.url }}" {% if item.new_window %}target="_blank" rel="noopener"{% endif %}>
-                {% if item.type == 'icon' %}
-                <span class="fab {{ item.icon_class }}"
-                aria-hidden="true"></span><span class="screen-reader-text">{{ item.label }}</span>
-                {% else %}
-                {{ item.label }}
-                {% endif %}
-              </a>
+            {% for action in site.params.header.nav_links %}
+            <li {{ classNames('menu-item', {'current-menu-item': page.url == action.url, 'menu-button': action.type != 'link'}) }}>
+              {% set include_dict = {'action': action} %}
+              {% include "action_link.html" %}
             </li>
             {% endfor %}
           </ul><!-- .menu -->

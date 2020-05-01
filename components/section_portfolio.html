@@ -18,7 +18,7 @@
         {% for post in recent_projects %}
         <article class="project">
           {% if loop.last and section.view_all_label and section.view_all_url %}
-          <a href="{{ include_dict.section.view_all_url }}" class="project-link view-all-link">
+          <a href="{{ section.view_all_url | relative_url }}" class="project-link view-all-link">
             {% if post.params.thumb_image %}
             <div class="project-thumbnail">
               <img src="{{ post.params.thumb_image | relative_url }}" alt="{{ post.params.title }}" />

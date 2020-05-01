@@ -5,19 +5,18 @@
         {% if site.params.footer.content %}
         <span class="copyright">{{ site.params.footer.content | safe }}</span>
         {% endif %}
-        {% for link in site.params.footer.links %}
-        <a {{ classNames({'button': link.type == 'button'}) }} href="{{ link.url }}" {% if link.new_window %}target="_blank" rel="noopener"{% endif %}>
-          {% if link.type == 'icon' %}
-          <span class="fab {{ link.icon_class }}"
-          aria-hidden="true"></span><span class="screen-reader-text">{{ link.label }}</span>
-          {% else %}
-           {{ link.label }}
-          {% endif %}
-        </a>
+        {% for action in site.params.footer.links %}
+          {% set include_dict = {'action': action} %}
+          {% include "action_link.html" %}
         {% endfor %}
       </div><!-- .site-info -->
       {% if site.params.footer.has_social %}
-        {% include "social.html" %}
+      <div class="social-links">
+        {% for action in site.params.footer.social_links %}
+          {% set include_dict = {'action': action} %}
+          {% include "action_link.html" %}
+        {% endfor %}
+      </div><!-- .social-links -->
       {% endif %}
     </div><!-- .site-footer-inside -->
   </div><!-- .inner -->
