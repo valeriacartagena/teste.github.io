@@ -12,7 +12,7 @@
   </header><!--.page-header -->
 
   <div class="portfolio-feed layout-{{ page.params.layout_style }}">
-    {% set display_projects = getPages("/projects") | sort(true, true, "date") %}
+    {% set display_projects = getPages("/portfolio") | sort(true, true, "date") %}
     {% for post in display_projects %}
     <article class="project">
       <a href="{{ post.url | relative_url }}" class="project-link">

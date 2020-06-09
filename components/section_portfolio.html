@@ -13,7 +13,7 @@
     {% endif %}
     <div class="block-content">
       <div class="portfolio-feed layout-{{ section.layout_style }}">
-        {% set display_projects = getPages("/projects") | sort(true, true, "date") %}
+        {% set display_projects = getPages("/portfolio") | sort(true, true, "date") %}
         {% set recent_projects = display_projects | slice_array(0, section.projects_number) %}
         {% for post in recent_projects %}
         <article class="project">
