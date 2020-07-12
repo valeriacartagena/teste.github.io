@@ -17,9 +17,9 @@
       {% endif %}
       <form name="{{ section.form_id }}" id="{{ section.form_id }}" {% if section.form_action %} action="{{ section.form_action }}" {% endif %}method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
         <div class="screen-reader-text">
-          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          <label id="{{ section.form_id }}-bot-label">Don't fill this out if you're human: <input aria-labelledby="{{ section.form_id }}-bot-label" name="bot-field" /></label>
         </div>
-        <input type="hidden" name="form-name" value="{{ section.form_id }}" />
+        <input type="hidden" aria-label="{{ section.form_id }}-name" name="form-name" value="{{ section.form_id }}" />
         {% for field in section.form_fields %}
           {% set include_dict = {'field': field} %}
           {% include "form_field.html" %}
