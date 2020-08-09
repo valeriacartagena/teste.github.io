@@ -27,6 +27,9 @@ pageData:
       - '[1]'
       - '[1].fields.color_scheme'
       - '[1].fields.accent_color'
+logicFields:
+  - section_portfolio.projects_number
+  - section_posts.posts_number
 models:
   config:
     type: config
