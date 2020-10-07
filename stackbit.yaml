@@ -155,6 +155,7 @@ models:
             - section_testimonials
   blog:
     type: page
+    urlPath: "/blog"
     label: Blog
     layout: blog
     file: blog/index.md
@@ -189,6 +190,7 @@ models:
         required: true
   portfolio:
     type: page
+    urlPath: "/portfolio"
     label: Portfolio
     layout: portfolio
     file: portfolio/index.md
@@ -243,6 +245,7 @@ models:
         description: The image shown below the page title and subtitle.
   post:
     type: page
+    urlPath: "/blog/{slug}"
     label: Post
     layout: post
     folder: blog
@@ -274,6 +277,7 @@ models:
         description: The excerpt of the post displayed in the blog feed and in meta data.
   project:
     type: page
+    urlPath: "/portfolio/{slug}"
     label: Project
     layout: project
     folder: portfolio
