@@ -21,7 +21,7 @@
           <a href="{{ section.view_all_url | relative_url }}" class="project-link view-all-link">
             {% if post.params.thumb_image %}
             <div class="project-thumbnail">
-              <img src="{{ post.params.thumb_image | relative_url }}" alt="{{ post.params.title }}" />
+              <img src="{{ post.params.thumb_image | relative_url }}" alt="{{ post.params.thumb_image_alt }}" />
             </div>
             {% endif %}
             <span class="view-all-button">{{ section.view_all_label }}</span>
@@ -30,7 +30,7 @@
           <a href="{{ post.url | relative_url }}" class="project-link">
             {% if post.params.thumb_image %}
             <div class="project-thumbnail">
-              <img src="{{ post.params.thumb_image | relative_url }}" alt="{{ post.params.title }}" />
+              <img src="{{ post.params.thumb_image | relative_url }}" alt="{{ post.params.thumb_image_alt }}" />
             </div>
             {% endif %}
             <header class="project-header">

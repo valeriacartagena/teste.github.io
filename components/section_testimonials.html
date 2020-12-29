@@ -20,7 +20,7 @@
             <p class="testimonial-content">{{ testimonial.content | safe }}</p>
             <footer class="testimonial-footer">
               {% if testimonial.avatar %}
-              <img class="testimonial-avatar" src="{{ testimonial.avatar | relative_url }}" alt="Author avatar">
+              <img class="testimonial-avatar" src="{{ testimonial.avatar | relative_url }}" alt="{{ testimonial.avatar_alt }}">
               {% endif %}
               <cite class="testimonial-author">{{ testimonial.author }}</cite>
             </footer>

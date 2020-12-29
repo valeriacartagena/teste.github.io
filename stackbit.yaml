@@ -35,6 +35,10 @@ models:
     type: config
     label: Site Configuration
     fields:
+      - type: image
+        name: favicon
+        label: Favicon
+        description: A square icon that represents your website
       - type: string
         name: description
         label: Site Description
@@ -79,6 +83,10 @@ models:
         name: logo_img
         label: Logo Image
         description: The logo image displayed in the header.
+      - type: string
+        name: logo_img_alt
+        label: Logo Image Alt Text
+        description: The alt text of the logo image.
       - type: boolean
         name: has_nav
         label: Enable Navigation Menu
@@ -243,6 +251,10 @@ models:
         name: image
         label: Image
         description: The image shown below the page title and subtitle.
+      - type: string
+        name: image_alt
+        label: Image Alt Text
+        description: The alt text of the image.
   post:
     type: page
     urlPath: "/blog/{slug}"
@@ -265,12 +277,20 @@ models:
         required: true
       - type: image
         name: thumb_image
-        label: Featured Image
+        label: Image (Blog Feed)
         description: The image shown in the blog feed.
+      - type: string
+        name: thumb_image_alt
+        label: Image Alt Text (Blog Feed)
+        description: The alt text of the blog feed image.
       - type: image
         name: image
-        label: Alternative Featured Image
+        label: Image (Single Post)
         description: The image shown in the single post.
+      - type: string
+        name: image_alt
+        label: Image Alt Text (Single Post)
+        description: The alt text of the single post image.
       - type: string
         name: excerpt
         label: Excerpt
@@ -301,12 +321,20 @@ models:
         required: true
       - type: image
         name: thumb_image
-        label: Featured Image
-        description: The image shown in the project page.
+        label: Image (Portfolio)
+        description: The image shown in the portfolio page.
+      - type: string
+        name: thumb_image_alt
+        label: Image Alt Text (Portfolio)
+        description: The alt text of the portfolio page image.
       - type: image
         name: image
-        label: Alternative Featured Image
+        label: Image (Single Project)
         description: The image shown in the single project.
+      - type: string
+        name: image_alt
+        label: Image Alt Text (Single Project)
+        description: The alt text of the single project image.
   section:
     type: object
     label: Section
@@ -334,6 +362,10 @@ models:
         name: image
         label: Image
         description: The image of the section.
+      - type: string
+        name: image_alt
+        label: Image Alt Text
+        description: The alt text of the section image.
       - type: markdown
         name: content
         label: Content
@@ -536,8 +568,13 @@ models:
         description: Font Awesome icon class name, used only when style is "icon".
       - type: boolean
         name: new_window
-        label: Open in new tab/window
+        label: Should the link open a new tab/window
         default: false
+      - type: boolean
+        name: no_follow
+        label: No follow
+        default: false
+        description: 'Add rel="nofollow" attribute to the link'
   grid_item:
     type: object
     label: Grid Item
@@ -551,6 +588,10 @@ models:
         name: image
         label: Image
         description: The image of the grid item.
+      - type: string
+        name: image_alt
+        label: Image Alt Text
+        description: The alt text of the grid image.
       - type: markdown
         name: content
         label: Content
@@ -573,8 +614,12 @@ models:
         required: true
       - type: image
         name: avatar
-        label: Avatar
-        description: The avatar of the testimonial author.
+        label: Author Image
+        description: The image of the testimonial author.
+      - type: string
+        name: avatar_alt
+        label: Author Image Alt Text
+        description: The alt text of the testimonial author image.
       - type: string
         name: content
         label: Content
