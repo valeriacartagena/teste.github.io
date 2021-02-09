@@ -21,7 +21,7 @@
               {% set actionUrl = action.url | trim('/') %}
               <li {{ classNames('menu-item', {'current-menu-item': pageUrl == actionUrl, 'menu-button': action.style != 'link'}) }}>
                 {% set include_dict = {'action': action} %}
-                {% include "action_link.html" %}
+                {% include "action.html" %}
               </li>
             {% endfor %}
           </ul><!-- .menu -->

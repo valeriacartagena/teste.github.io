@@ -21,11 +21,5 @@
       {{ section.content | markdownify }}
     </div>
     {% endif %}
-    {% if section.actions %}
-    <div class="block-buttons inner-sm">
-      {% set include_dict = {'actions': section.actions} %}
-      {% include "cta_buttons.html" %}
-    </div>
-    {% endif %}
   </div><!-- .inner -->
 </section><!-- .block -->

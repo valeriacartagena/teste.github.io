@@ -3,6 +3,15 @@
  */
 .project {
   margin-bottom: 1.66667em;
+
+  .project-link {
+    border: 0;
+    color: _palette(charcoal);
+
+    .palette-dark & {
+      color: #fff;
+    }
+  }
 }
 
 .project-header {
@@ -58,8 +67,6 @@
 }
 
 .project-link {
-  border: 0;
-  color: _palette(charcoal);
   display: block;
   position: relative;
 
