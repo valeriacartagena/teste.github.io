@@ -14,7 +14,7 @@
       <div class="social-links">
         {% for action in site.params.footer.social_links %}
           {% set include_dict = {'action': action} %}
-          {% include "action_link.html" %}
+          {% include "action.html" %}
         {% endfor %}
       </div><!-- .social-links -->
       {% endif %}

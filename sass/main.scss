@@ -25,20 +25,17 @@ $palette: (
 );
 
 @import "imports/functions";
-
-@import "fontawesome.min.css";
-@import "brands.min.css";
-
 @import "imports/reset";
 @import "imports/general";
+@import "imports/buttons";
 @import "imports/icons";
+@import "imports/forms";
+@import "imports/helpers";
 @import "imports/animations";
 @import "imports/structure";
 @import "imports/header";
 @import "imports/posts-pages";
-//@import "imports/post-navigation";
 @import "imports/portfolio";
 @import "imports/sections";
 @import "imports/footer";
-@import "imports/palettes";
 @import "imports/banner";

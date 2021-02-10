@@ -5,15 +5,35 @@
   border-top: 1px solid _palette(charcoal-light-75);
   padding-bottom: 1.33333em;
   padding-top: 2.5em;
+
+  .palette-dark & {
+    border-top-color: _palette(charcoal-light-7);
+  }
 }
 
-#colophon {
+.site-footer {
   a:not(.button) {
     color: inherit;
 
     &:hover,
     &:focus {
       color: _palette(accent);
+
+      .accent-green & {
+        color: _palette(accent-green);
+      }
+    
+      .accent-blue & {
+        color: _palette(accent-blue);
+      }
+    
+      .accent-violet & {
+        color: _palette(accent-violet);
+      }
+    
+      .accent-yellow & {
+        color: _palette(accent-yellow);
+      }
     }
   }
 }
