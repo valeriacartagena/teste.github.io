@@ -1,8 +1,9 @@
 baseurl: "/"
 title: "Stackbit Exto Theme"
-page_load_js: "assets/js/main.js"
+init_js: "js/init.js"
+page_load_js: "js/page-load.js"
+page_unload_js: "js/page-unload.js"
 params:
-  description: A portfolio theme with a blog
   color_scheme: light
   accent_color: pink
   header:
@@ -35,26 +36,28 @@ params:
       - label: Twitter
         url: https://twitter.com/
         style: icon
-        icon_class: fa-twitter
+        icon: twitter
         new_window: true
       - label: Instagram
         url: https://www.instagram.com/
         style: icon
-        icon_class: fa-instagram
+        icon: instagram
         new_window: true
       - label: Dribbble
         url: https://dribbble.com/
         style: icon
-        icon_class: fa-dribbble
+        icon: dribbble
         new_window: true
       - label: LinkedIn
         url: https://www.linkedin.com/
         style: icon
-        icon_class: fa-linkedin
+        icon: linkedin
         new_window: true
 sass:
-  input_file: sass/main.scss.njk
-  output_file: assets/css/main.css
+  input_file: sass/main.scss
+  output_file: css/main.css
   indentWidth: 4
   outputStyle: nested
   precision: 10
+templates:
+  body_class: "palette-{{ site.params.color_scheme }} accent-{{ site.params.accent_color }}"

@@ -19,11 +19,15 @@
 .post-subtitle {
   color: _palette(charcoal-light-40);
   margin-top: 0.5em;
+
+  .palette-dark & {
+    color: _palette(charcoal-light-25);
+  }
 }
 
 .post-subtitle {
   font-size: 1.33333em;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .post-meta {
@@ -31,6 +35,10 @@
   font-size: 0.88889em;
   letter-spacing: 1px;
   text-transform: uppercase;
+
+  .palette-dark & {
+    color: _palette(charcoal-light-25);
+  }
 }
 
 .post-full {
@@ -85,12 +93,7 @@
 
     a {
       border: 0;
-      color: inherit;
-  
-      &:hover,
-      &:focus {
-        color: _palette(charcoal-light-15);
-      }
+      color: inherit !important;
     }
   }
 

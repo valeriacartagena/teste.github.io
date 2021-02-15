@@ -5,6 +5,10 @@
   border-bottom: 1px solid _palette(charcoal-light-75);
   padding-bottom: 1em;
   padding-top: 1em;
+
+  .palette-dark & {
+    border-bottom-color: _palette(charcoal-light-7);
+  }
 }
 
 .site-header-inside {
@@ -47,6 +51,22 @@
     background: _palette(accent);
     display: inline-block;
     padding: 0.2em 0.45em;
+
+    .accent-green & {
+      background: _palette(accent-green);
+    }
+  
+    .accent-blue & {
+      background: _palette(accent-blue);
+    }
+  
+    .accent-violet & {
+      background: _palette(accent-violet);
+    }
+  
+    .accent-yellow & {
+      background: _palette(accent-yellow);
+    }
   }
 }
 
@@ -62,6 +82,22 @@
 
   &.current-menu-item {
     color: _palette(accent);
+
+    .accent-green & {
+      color: _palette(accent-green);
+    }
+  
+    .accent-blue & {
+      color: _palette(accent-blue);
+    }
+  
+    .accent-violet & {
+      color: _palette(accent-violet);
+    }
+  
+    .accent-yellow & {
+      color: _palette(accent-yellow);
+    }
   }
 
   a {
@@ -71,8 +107,41 @@
 
       &:hover {
         color: _palette(accent);
+
+        .accent-green & {
+          color: _palette(accent-green);
+        }
+      
+        .accent-blue & {
+          color: _palette(accent-blue);
+        }
+      
+        .accent-violet & {
+          color: _palette(accent-violet);
+        }
+      
+        .accent-yellow & {
+          color: _palette(accent-yellow);
+        }
       }
     }
+  }
+}
+
+#menu-open,
+#menu-close {
+  background: 0;
+  border: 0;
+  color: inherit;
+  height: 30px;
+  padding: 0;
+  position: relative;
+  width: 30px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
   }
 }
 
@@ -118,6 +187,10 @@
       visibility: hidden;
       width: 100%;
       z-index: 998;
+
+      .palette-dark & {
+        background: rgba(_palette(charcoal-dark-15),.6);
+      }
     }
   }
 
@@ -143,6 +216,10 @@
     visibility: hidden;
     width: 100%;
     z-index: 999;
+
+    .palette-dark & {
+      background:_palette(charcoal);
+    }
   }
 
   .site-nav-inside {
@@ -167,8 +244,16 @@
     border-top: 1px solid _palette(charcoal-light-75);
     display: block;
 
+    .palette-dark & {
+      border-top-color: _palette(charcoal-light-7);
+    }
+
     &:not(.menu-button):last-child {
       border-bottom: 1px solid _palette(charcoal-light-75);
+
+      .palette-dark & {
+        border-bottom-color: _palette(charcoal-light-7);
+      }
     }
 
     a {
