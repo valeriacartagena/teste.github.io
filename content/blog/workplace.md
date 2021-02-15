@@ -12,7 +12,7 @@ seo:
   description: Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit
   extra:
     - name: og:type
-      value: website
+      value: article
       keyName: property
     - name: og:title
       value: The Elements of Great Workplace Design

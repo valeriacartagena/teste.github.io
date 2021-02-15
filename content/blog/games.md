@@ -12,7 +12,7 @@ seo:
   description: Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer
   extra:
     - name: og:type
-      value: website
+      value: article
       keyName: property
     - name: og:title
       value: What are some of the best designed video games

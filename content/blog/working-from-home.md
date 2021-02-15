@@ -10,7 +10,7 @@ seo:
   description: Interdum posuere lorem ipsum dolor sit amet consectetur
   extra:
     - name: og:type
-      value: website
+      value: article
       keyName: property
     - name: og:title
       value: The Advantages and Disadvantages of Working from Home

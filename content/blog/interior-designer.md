@@ -12,7 +12,7 @@ seo:
   description: Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat
   extra:
     - name: og:type
-      value: website
+      value: article
       keyName: property
     - name: og:title
       value: How To Choose An Interior Designer

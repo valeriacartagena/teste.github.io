@@ -14,7 +14,7 @@ seo:
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
   extra:
     - name: og:type
-      value: website
+      value: article
       keyName: property
     - name: og:title
       value: The function of design is letting design function
