@@ -150,7 +150,6 @@ models:
         description: Page sections
         items:
           type: model
-          labelField: title
           models:
             - section_content
             - section_form
@@ -547,7 +546,6 @@ models:
         name: url
         label: URL
         required: true
-        widget: url
         default: "#"
       - type: enum
         name: style
@@ -697,7 +695,6 @@ models:
             - noimageindex
             - notranslate
             - none
-          default: all
       - type: list
         name: extra
         label: Extra
