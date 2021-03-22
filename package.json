@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stackbithq/stackbit-theme-exto"
+    "url": "git+https://github.com/stackbit-themes/exto-unibit"
   },
   "author": "Stackbit",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stackbithq/stackbit-theme-exto/issues"
+    "url": "https://github.com/stackbit-themes/exto-unibit/issues"
   },
   "homepage": "https://docs.stackbit.com/unibit/",
   "dependencies": {
